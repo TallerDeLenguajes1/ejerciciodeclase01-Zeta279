@@ -11,7 +11,13 @@ namespace Problema03
             MostrarAuto(Auto1);            
 
             Auto Auto2 = CrearAutoPeugeot();
-            MostrarAuto(Auto2);
+            try{
+                MostrarAuto(Auto2);
+            }
+            catch(Exception ex){
+                Console.WriteLine("No se instació el objeto");
+                Console.WriteLine("Mensaje de error: " + ex.Message);
+            }
         }
 
         static Auto CrearAutoFiat(int? anio = null)

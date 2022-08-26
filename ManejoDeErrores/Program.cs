@@ -13,11 +13,17 @@ namespace ManejoDeErrores
             list[3] = "Wednesday";
             list[4] = "Thursday";
 
-            for (int i = 0; i <= 5; i++)
-            {
-                Console.WriteLine(list[i].ToString());
+            try{
+                for (int i = 0; i <= 5; i++)
+                {
+                    Console.WriteLine(list[i].ToString());
+                }
+                Console.ReadLine();
             }
-            Console.ReadLine();
+            catch(Exception ex){
+                Console.WriteLine("No se puede acceder al índice solicitado");
+                Console.WriteLine("Mensaje de error: " + ex.Message);
+            }
         }
     }
 }

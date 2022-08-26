@@ -11,9 +11,16 @@ namespace Problema02
 
             num1 = 30;
             num2 = 60;
-            result = Convert.ToByte(num1 * num2);
-            Console.WriteLine("{0} x {1} = {2}", num1, num2, result);
-            Console.ReadLine();
+            try{
+                result = Convert.ToByte(num1 * num2);
+                Console.WriteLine("{0} x {1} = {2}", num1, num2, result);
+                Console.ReadLine();
+            }
+            catch(Exception ex){
+                Console.WriteLine("No es posible convertir el valor a byte");
+                Console.WriteLine("Mensaje de error: " + ex.Message);
+            }
+            
         }
     }
 }
